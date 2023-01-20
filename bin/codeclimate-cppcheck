@@ -3,13 +3,12 @@
 import os
 import sys
 
-
 # this makes the below from runner work
-lib_path = os.path.abspath(os.path.join(__file__, '..', '..', 'lib'))
+lib_path = os.path.abspath(os.path.join(__file__, "..", "..", "lib"))
 sys.path.append(lib_path)
 
 # trunk-ignore(flake8/E402)
 from runner import Runner
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     Runner().run()

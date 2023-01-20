@@ -15,7 +15,7 @@ class IssueFormatter:
         issue['description'] = self.node.get('msg').replace("'", "`")
 
         issue['content'] = {}
-        issue['content']['body'] = self.node.get('verbose').replace("'", "`");
+        issue['content']['body'] = self.node.get('verbose').replace("'", "`")
         if self.node.get('cwe'):
             # Include CWE link for detailed information.
             issue['content']['body'] += (
@@ -30,9 +30,9 @@ class IssueFormatter:
         issue['other_locations'] = []
         if len(self.node) > 1:
             locations = list(self.node)[1:]
-            for l in locations:
-                if l.get('line') is not None:
-                    location = self._convert_location(l)
+            for location in locations:
+                if location.get('line') is not None:
+                    location = self._convert_location(location)
                     issue['other_locations'].append(location)
 
         return issue

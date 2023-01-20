@@ -23,47 +23,47 @@ Like the `cppcheck` command line tool itself, you can configure various
 aspects of the static analysis. Right now, the following options are supported
 in `.codeclimate.yml`:
 
-* `check`: issue categories to check. 
+- `check`: issue categories to check.
   By default, no additional checks are enabled.
   Available values are: `all`, `warning`, `style`, `performance`, `portability`,
   `information`, `unusedFunction`, etc.
   Refer to the `--enable=` option of `cppcheck` for more information.
-* `project`: use Visual Studio project/solution (`*.vcxproj`/`*sln`) or compile
+- `project`: use Visual Studio project/solution (`*.vcxproj`/`*sln`) or compile
   database (`compile_commands.json`) for files to analyse, include paths,
   defines, platform and undefines.
   Refer to the `--project=` option of `cppcheck` for more information.
-* `language`: forces `cppcheck` to check all files as the given language.
+- `language`: forces `cppcheck` to check all files as the given language.
   Valid values are: `c`, `c++`.
   Refer to the `--language=` option of `cppcheck` for more information.
-* `stds`: multiple language standards to check against.
+- `stds`: multiple language standards to check against.
   Refer to the `--std=` option of `cppcheck` for more information.
-* `platform`: specifies platform specific types and sizes. Available builtin
+- `platform`: specifies platform specific types and sizes. Available builtin
   platforms are: `unix32`, `unix64`, `win32A`, `win32W`, `win64`, etc.
   Refer to the `--platform=` option of `cppcheck` for more information.
-* `library`: specifies library `cfg` files to be loaded. Refer to the 
+- `library`: specifies library `cfg` files to be loaded. Refer to the
   `--library=` option of `cppcheck` for more information.
-* `jobs`: specifies the number of jobs for execution Refer to the 
+- `jobs`: specifies the number of jobs for execution Refer to the
   `-j <jobs>` option of `cppcheck` for more information.
-* `dump`: create dump files during execution.
+- `dump`: create dump files during execution.
   Refer to the `--dump` option of `cppcheck` for more information.
-* `defines`: define preprocessor symbols.
+- `defines`: define preprocessor symbols.
   Refer to the `-D` option of `cppcheck` for more information.
-* `undefines`: undefine preprocessor symbols.
+- `undefines`: undefine preprocessor symbols.
   Refer to the `-U` option of `cppcheck` for more information.
-* `includes`: paths for searching include files. First given path is searched
+- `includes`: paths for searching include files. First given path is searched
   for contained header files first. If paths are relative to source files,
   this is not needed.
   Refer to the `-I` option of `cppcheck` for more information.
-* `max_configs`: maximum number of configurations to check in a file before
+- `max_configs`: maximum number of configurations to check in a file before
   skipping it. Default is 12. `max_configs` can also be set to `force`, which
   forces `cppcheck` to check all configs.
   Refer to the `--max-configs=` and `--force` options of `cppcheck` for more
   information.
-* `inconclusive`: allow reporting issues that are not inconclusive.
+- `inconclusive`: allow reporting issues that are not inconclusive.
   Refer to the `--inconclusive` option of `cppcheck` for more information.
-* `suppressions-list`: suppress warnings listed in the file.
+- `suppressions-list`: suppress warnings listed in the file.
   Refer to the `--suppressions-list` option of `cppcheck` for more information.
-* `inline-suppr`: allow suppression of warnings with inline comments, 
+- `inline-suppr`: allow suppression of warnings with inline comments,
   for example: `// cppcheck-suppress arrayIndexOutOfBounds`.
   Refer to the `--inline-suppr` option of `cppcheck` for more information
 
