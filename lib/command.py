@@ -46,16 +46,16 @@ class Command:
             else:
                 command.append('--max-configs={}'.format(self.config.get('max_configs')))
 
-        if self.config.get('inconclusive', 'true') == True:
+        if self.config.get('inconclusive', 'true') is True:
             command.append('--inconclusive')
             
         if self.config.get('suppressions-list'):
             command.append('--suppressions-list={}'.format(self.config.get('suppressions-list')))
         
-        if self.config.get('inline-suppr', 'true') == True:
+        if self.config.get('inline-suppr', 'true') is True:
             command.append('--inline-suppr')
 
-        if self.config.get('dump', 'true') == True:
+        if self.config.get('dump', 'true') is True:
             command.append('--dump')
 
         command.extend(['--xml', '--xml-version=2'])
